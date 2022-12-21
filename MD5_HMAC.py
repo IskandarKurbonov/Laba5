@@ -1,7 +1,7 @@
 from MD5 import MD5
 
 
-def Fork():
+def MD5_HMAC():
     with open('TextForTest.txt', 'r') as f:
         text = f.read()
     MESSAGE = text
@@ -16,4 +16,4 @@ def Fork():
     result = outer.hex_digest()
     print(result)
     return result
-Fork()
+MD5_HMAC()
