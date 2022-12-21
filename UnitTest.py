@@ -1,5 +1,5 @@
 from GOST2814 import GOST2814789MAC
-from MD5_HMAC import Fork
+from MD5_HMAC import MD5_HMAC
 import unittest
 
 
@@ -17,7 +17,7 @@ class Test(unittest.TestCase):
 
     def test_MD5_HMAC(self):
         expected = "a4c5c7fc432a60ad064ff2f3ac05aba5"
-        actual = Fork()
+        actual = MD5_HMAC()
         self.assertEqual(actual, expected)
 
 
