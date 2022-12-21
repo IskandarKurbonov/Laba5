@@ -8,7 +8,7 @@ class Test(unittest.TestCase):
         self.gost = GOST2814789MAC()
 
     def test_gost(self):
-        imitovstavka = "10110110101010111110011111100110"
+        imitovstavka = "11100001000111101001011100010011"
         with open('TextForTest.txt', 'r') as f:
             text = f.read()
         self.gost.fill_block(text)
@@ -16,7 +16,7 @@ class Test(unittest.TestCase):
         self.assertEqual(imitovstavka, otvet)
 
     def test_MD5_HMAC(self):
-        expected = "3ae70a0f6711cd0af3d616e28fe767a8"
+        expected = "a4c5c7fc432a60ad064ff2f3ac05aba5"
         actual = Fork()
         self.assertEqual(actual, expected)
 
